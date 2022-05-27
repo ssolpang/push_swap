@@ -12,8 +12,10 @@
 
 #include "push_swap.h"
 
-void	initial_setting()
-{}
+void	initial_setting(int argc, char **argv)
+{
+	
+}
 
 int	main(int argc, char **argv)
 {
@@ -24,5 +26,6 @@ int	main(int argc, char **argv)
 	if (argc <= 0)
 		return ;
 	initial_setting(argc, argv);
+
 	return ;
 }
