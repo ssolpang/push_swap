@@ -6,26 +6,22 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:58:53 by jkwak             #+#    #+#             */
-/*   Updated: 2022/05/26 14:42:28 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/05/31 18:33:10 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	initial_setting(int argc, char **argv)
+/* int	setting_stack(int argc, char **argv, t_int_stack *s)
 {
-	
-}
+} */
 
 int	main(int argc, char **argv)
 {
-	int			i;
-	Int_stack	a;
-	Int_stack	b;
+	t_int_stack	*stack_a;
 
 	if (argc <= 0)
-		return ;
-	initial_setting(argc, argv);
-
-	return ;
+		return ; //error 처리
+	//setting_stack();
+	return (0); //반환값 추후 수정
 }

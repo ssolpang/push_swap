@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:59:02 by jkwak             #+#    #+#             */
-/*   Updated: 2022/05/26 13:47:40 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/05/31 17:27:55 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 #include <stdlib.h>
 #include "libft/libft.h"
 
-typedef struct Int_stack{
+typedef struct s_int_stack
+{
 	int	max;
-	int	top;
-	int	bottom;
-	int	*arr;
-} Int_stack;
+	int	count;
+	int	*stk;
+} t_int_stack;
 
 #endif
