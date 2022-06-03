@@ -6,13 +6,18 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 13:12:51 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/02 17:13:01 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/03 14:31:28 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	if_split(char *str)
+int	check_error()
+{
+	//정상이면 0, 에러면 -1 리턴
+}
+
+char	**if_split(char *str, char **temp)
 {
 	int	i;
 
@@ -21,25 +26,37 @@ int	if_split(char *str)
 	{
 		if ((str[i] >= 9 && str[i] <= 13)
 			|| str[i] == 32)
-			return (1);
+			{
+				temp = ft_split(str, '공백');
+				return (temp);
+			}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 int	setting_stack(int argc, char **argv, t_stack *a)
 {
-	int	i;
-	int	flag;
+	int		i;
+	int		j;
+	char	**temp;
 
 	i = 1;
 	while (i < argc)
 	{
-		flag = if_split(argv[i]);
-		if (flag == 1)
+		temp = if_split(argv[i], temp); //split가 실패해도 NULL, split할 게 없어도 NULL..
+		if (temp)
 		{
-			ft_split(argv[i]);
+			j = 0;
+			while (temp[j])
+			{
+				if (check_error(temp[j]))
+					return (/*에러 처리*/ -1);
+				a->arr[a->count++] = ft_atoi(temp[j++]);
+			}
 		}
+		else
+			check_error(argv[i]);
 		a->arr[a->count++] = ft_atoi(argv[i++]);
 	}
 }
