@@ -3,18 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: jkwak <jkwak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 13:12:51 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/03 14:31:28 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/05 00:51:54 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	check_error()
+int	check_error(char *str)
 {
-	//정상이면 0, 에러면 -1 리턴
+	if (ft_strlen(str) == 0)
+		return (1);
+	//int 범위, 숫자 외 문자, +- 하나 초과, 빈 문자열"" "  "
+	//정상이면 0, 에러면 1 리턴
 }
 
 char	**if_split(char *str, char **temp)
@@ -41,8 +44,8 @@ int	setting_stack(int argc, char **argv, t_stack *a)
 	int		j;
 	char	**temp;
 
-	i = 1;
-	while (i < argc)
+	i = 0;
+	while (++i < argc)
 	{
 		temp = if_split(argv[i], temp); //split가 실패해도 NULL, split할 게 없어도 NULL..
 		if (temp)
@@ -57,7 +60,7 @@ int	setting_stack(int argc, char **argv, t_stack *a)
 		}
 		else
 			check_error(argv[i]);
-		a->arr[a->count++] = ft_atoi(argv[i++]);
+		a->arr[a->count++] = ft_atoi(argv[i]);
 	}
 }
 
@@ -66,3 +69,5 @@ int	setting_stack(int argc, char **argv, t_stack *a)
 //atoi 함수에서 예외처리할 수도 있음
 
 //에러 시 exit하고 "error" 출력하는 함수
+
+//malloc을 안 쓸 수 있으면 되도록 안 쓰고 싶음
