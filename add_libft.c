@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 16:02:45 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/05 21:52:56 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/05 23:26:24 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,20 @@ long long int	ft_atoi_ps(const char *str)
 	long long int	nbr;
 
 	i = 0;
-	while (((*(str + i) >= 9) && (*(str + i) <= 13))
-		|| (*(str + i) == 32))
+	while (((str[i] >= 9) && (str[i] <= 13))
+		|| (str[i] == 32))
 		i++;
 	sign = 1;
-	if ((*(str + i) == '+') || (*(str + i) == '-'))
+	if ((str[i] == '+') || (str[i] == '-'))
 	{
-		if (*(str + i) == '-')
+		if (str[i] == '-')
 			sign = -1;
 		i++;
 	}
 	nbr = 0;
-	while ((*(str + i) >= '0') && (*(str + i) <= '9'))
+	while ((str[i] >= '0') && (str[i] <= '9'))
 	{
-		nbr = (nbr * 10) + *(str + i) - '0';
+		nbr = (nbr * 10) + str[i] - '0';
 		i++;
 	}
 	return (sign * nbr);
