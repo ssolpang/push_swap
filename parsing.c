@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 13:12:51 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/05 00:51:54 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/05 23:11:16 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,21 @@
 
 int	check_error(char *str)
 {
+	int				i;
+	long long int	nbr;
+
 	if (ft_strlen(str) == 0)
 		return (1);
-	//int 범위, 숫자 외 문자, +- 하나 초과, 빈 문자열"" "  "
-	//정상이면 0, 에러면 1 리턴
+	i = 0;
+	if ((str[i] == '+') || (str[i] == '-'))
+		i++;
+	while (str[i])
+		if (!ft_isdigit(str[i++]))
+			return (1);
+	nbr = ft_atoi_ps(str);
+	if ((nbr > 2147483647) || (nbr < -2147483648))
+		return (1);
+	return (0);
 }
 
 char	**if_split(char *str, char **temp)
@@ -27,10 +38,9 @@ char	**if_split(char *str, char **temp)
 	i = 0;
 	while (str[i])
 	{
-		if ((str[i] >= 9 && str[i] <= 13)
-			|| str[i] == 32)
+		if (ft_iswhite(str[i]))
 			{
-				temp = ft_split(str, '공백');
+				temp = ft_split_ps(str);
 				return (temp);
 			}
 		i++;
@@ -59,9 +69,12 @@ int	setting_stack(int argc, char **argv, t_stack *a)
 			}
 		}
 		else
-			check_error(argv[i]);
-		a->arr[a->count++] = ft_atoi(argv[i]);
+			if (check_error(argv[i]))
+				return (/*에러 처리*/ -1);
+			else
+				a->arr[a->count++] = ft_atoi(argv[i]);
 	}
+	return (/*정상 작동*/ 0);
 }
 
 //표준 입력으로 인자를 받아서 int로 변환
