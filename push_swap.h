@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkwak <jkwak@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:59:02 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/05 23:12:13 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/07 11:47:37 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int				peek_stack(t_stack *stack, int *temp);
 void			terminate_stack(t_stack *stack);
 
 /*add_libft.c*/
+void			error_exit();
 int 			ft_iswhite(int c);
 long long int	ft_atoi_ps(const char *str);
 

@@ -3,14 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   add_libft.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkwak <jkwak@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 16:02:45 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/05 23:26:24 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/07 12:13:30 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+/* if(stack->count >= stack->max)
+		{
+			temp = malloc(sizeof(int) * stack->max * 2);
+			if (!temp)
+				{
+					stack->
+				}
+			memcpy(temp, stack->arr, stack->max);
+			free(stack->arr);
+			stack->arr = temp;
+			stack->max = stack->max * 2;
+		} */
+
+void	error_exit()
+{
+	ft_putstr_fd("error\n", 1);
+	exit(1);
+}
 
 int ft_iswhite(int c)
 {

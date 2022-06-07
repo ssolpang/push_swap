@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:58:53 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/02 15:33:47 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/07 12:13:26 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,15 @@
 
 int	main(int argc, char **argv)
 {
+	int		i;
 	t_stack	*a;
 
 	if (argc <= 1)
-		return ; //error 처리
-	//setting_stack();
-	return (0); //반환값 추후 수정
-}
+		return ;
+	//a 말록하기..
+	i = init_stack(a, 100);
+	i = setting_stack(argc, argv, a);
+	if (i == -1)
+		error_exit();
+	return (0);
+} 
