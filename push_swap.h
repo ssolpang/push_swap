@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:59:02 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/07 11:47:37 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/07 20:16:17 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@
 #include "libft/libft.h"
 
 /*utils.c*/
-int				init_stack(t_stack *stack, int max);
-int				push_stack(t_stack *stack, int value);
-int				pop_stack(t_stack *stack, int *temp);
-int				peek_stack(t_stack *stack, int *temp);
+t_stack			*init_stack(void);
+void			push_stack(t_stack *stack, int value);
+int				pop_stack(t_stack *stack);
 void			terminate_stack(t_stack *stack);
 
 /*add_libft.c*/
