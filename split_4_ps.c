@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 19:27:59 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/07 19:29:07 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/08 16:13:48 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,12 @@ int	word_count_ps(char const *s)
 	count = 0;
 	while (s[i])
 	{
-		if (ft_iswhite(s[i]))
+		if (ft_is_white(s[i]))
 			i++;
 		else
 		{
 			count++;
-			while (s[i] && (!ft_iswhite(s[i])))
+			while (s[i] && (!ft_is_white(s[i])))
 				i++;
 		}	
 	}
@@ -57,9 +57,9 @@ char	**word_list_ps(char **grp, char const *s, int count)
 	while (s[i] && (j < count))
 	{
 		len = 0;
-		while (s[i] && (ft_iswhite(s[i])))
+		while (s[i] && (ft_is_white(s[i])))
 			i++;
-		while (s [i] && (!ft_iswhite(s[i])))
+		while (s [i] && (!ft_is_white(s[i])))
 		{
 			i++;
 			len++;
@@ -70,7 +70,7 @@ char	**word_list_ps(char **grp, char const *s, int count)
 			word_clear_ps(grp);
 			return (NULL);
 		}
-		ft_strlcpy((grp[j++]), s[i - len], len + 1);
+		ft_strlcpy((grp[j++]), &s[i - len], len + 1);
 	}
 	return (grp);
 }

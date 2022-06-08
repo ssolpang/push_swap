@@ -6,32 +6,19 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 16:02:45 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/07 12:13:30 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/08 17:29:22 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* if(stack->count >= stack->max)
-		{
-			temp = malloc(sizeof(int) * stack->max * 2);
-			if (!temp)
-				{
-					stack->
-				}
-			memcpy(temp, stack->arr, stack->max);
-			free(stack->arr);
-			stack->arr = temp;
-			stack->max = stack->max * 2;
-		} */
-
-void	error_exit()
+void	ft_error_exit()
 {
 	ft_putstr_fd("error\n", 1);
 	exit(1);
 }
 
-int ft_iswhite(int c)
+int ft_is_white(int c)
 {
     if (((c >= 9) && (c <= 13))
 		|| (c == 32))
@@ -39,7 +26,21 @@ int ft_iswhite(int c)
     return (0);
 }
 
-long long int	ft_atoi_ps(const char *str)
+void	ft_free_double_pointer(char **temp)
+{
+	int	i;
+
+	i = 0;
+	while (temp[i])
+	{
+		if (temp[i])
+			free(temp[i]);
+		i++;
+	}
+	free(temp);
+}
+
+int	ft_atoi_ps(const char *str)
 {
 	int				i;
 	int				sign;
@@ -62,5 +63,7 @@ long long int	ft_atoi_ps(const char *str)
 		nbr = (nbr * 10) + str[i] - '0';
 		i++;
 	}
-	return (sign * nbr);
+	if ((nbr > 2147483647) || (nbr < -2147483648))
+		ft_error_exit(); /*에러 및 해제 처리 필요*/
+	return ((int)(sign * nbr));
 }

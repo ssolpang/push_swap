@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 19:42:31 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/07 20:02:11 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/08 17:28:53 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ t_stack	*init_stack(void)
 
 	stack = (t_stack *)malloc(sizeof(t_stack));
 	if (!stack)
-		error_exit();
+		ft_error_exit();
 	stack->arr = (int *)malloc(sizeof(int) * 100);
 	if (!stack->arr)
 	{
 		free(stack);
-		error_exit();
+		ft_error_exit();
 	}
 	stack->max = 100;
 	stack->count = 0;
@@ -40,9 +40,9 @@ void	push_stack(t_stack *stack, int value)
 		if (!temp)
 		{
 			terminate_stack(stack);
-			error_exit();
+			ft_error_exit();
 		}
-		memcpy(temp, stack->arr, stack->count);
+		ft_memcpy(temp, stack->arr, stack->count);
 		free(stack->arr);
 		stack->arr = temp;
 		stack->max *= 2;
@@ -59,6 +59,7 @@ int	pop_stack(t_stack *stack)
 	return (temp);
 }
 
+/*print stack 함수 만들기*/
 
 void	terminate_stack(t_stack *stack)
 {
