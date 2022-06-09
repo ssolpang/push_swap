@@ -1,42 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   terminate.c                                        :+:      :+:    :+:   */
+/*   indexing.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/08 17:25:20 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/09 13:54:44 by jkwak            ###   ########.fr       */
+/*   Created: 2022/06/09 16:47:02 by jkwak             #+#    #+#             */
+/*   Updated: 2022/06/09 20:01:23 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_error_exit()
+void	ft_bubble_sort(int *arr, int end)
 {
-	ft_putstr_fd("Error\n", 1);
-	exit(1);
-}
+	int	i;
 
-void	ft_free_double_pointer(char **temp, int j)
-{
-	while (temp[j])
+	while (0 < end)
 	{
-		free(temp[j]);
-		j++;
+		i = 0;
+		while (i < end)
+		{
+			if (arr[i] < arr[i + 1])
+				ft_simple_swap(&arr[i], &arr[i + 1]);
+			i++;
+		}
+		end--;
 	}
-	free(temp);
 }
 
-void	terminate_stack(t_stack *stack)
+void	arr_indexing(t_stack *a, t_stack *index)
 {
-	free(stack->arr);
-	free(stack);
-}
+	int	i;
+	int	j;
 
-void	exit_all(char **temp, int j, t_stack *stack)
-{
-	ft_free_double_pointer(temp, j);
-	terminate_stack(stack);
-	ft_error_exit();
+	ft_bubble_sort(index->arr, (index->count - 1));
+	i = 0;
+	while (i < a->count)
+	{
+		j = 0;
+		while (j < index->count)
+		{
+			if (a->arr[i] == index->arr[j])
+				a->arr[i] = j;
+			j++;
+		}
+		i++;
+	}
 }

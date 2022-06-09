@@ -6,13 +6,13 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 13:12:51 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/08 17:01:07 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/09 18:58:10 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	check_blank_argv(char *s)
+void	check_blank_argv(char *s, t_stack *a)
 {
 	int	i;
 
@@ -20,10 +20,13 @@ void	check_blank_argv(char *s)
 	while(ft_is_white(s[i]))
 		i++;
 	if (!s[i])
-		ft_error_exit();
+		{
+			terminate_stack(a);
+			ft_error_exit();
+		}
 }
 
-int	check_error(char *str)
+int	check_not_number(char *str)
 {
 	int				i;
 	long long int	nbr;
@@ -34,36 +37,49 @@ int	check_error(char *str)
 	while (str[i])
 		if (!ft_isdigit(str[i++]))
 			return (1);
-	nbr = ft_atoi_ps(str);
-	if ((nbr > 2147483647) || (nbr < -2147483648))
-		return (1);
 	return (0);
 }
 
-int	setting_stack(int argc, char **argv, t_stack *a)
+void	reverse_arr(t_stack *stack)
+{
+	int	front;
+	int	rear;
+	int	temp;
+
+	front = 0;
+	rear = stack->count - 1;
+	while (front < (stack->count / 2))
+	{
+		ft_simple_swap(&(stack->arr[front]), &(stack->arr[rear]));
+		front++;
+		rear--;
+	}
+}
+
+void	setting_stack(int argc, char **argv, t_stack *a)
 {
 	int		i;
 	int		j;
+	int		flag;
 	char	**temp;
 
 	i = 0;
 	while (++i < argc)
 	{
-		check_blank_argv(argv[i]);
+		check_blank_argv(argv[i], a);
 		temp = ft_split_ps(argv[i]);
 		j = 0;
 		while (temp[j])
 		{
-			if (check_error(temp[j]))
-			{
-				ft_free_double_pointer(temp);
-				ft_error_exit();
-			}
-			push_stack(a, ft_atoi(temp[j]));
+			if (check_not_number(temp[j]))
+				exit_all(temp, j, a);
+			flag = push_stack(a, ft_atoi_ps(temp, j, a));
+			if (flag == -1)
+				exit_all(temp, j, a);
 			free(temp[j]);
 			j++;
 		}
 		free(temp);
 	}
-	return (0);
+	reverse_arr(a);
 }

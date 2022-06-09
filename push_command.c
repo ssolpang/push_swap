@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   push_command.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/26 10:58:53 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/09 20:02:36 by jkwak            ###   ########.fr       */
+/*   Created: 2022/06/09 10:52:21 by jkwak             #+#    #+#             */
+/*   Updated: 2022/06/09 16:12:24 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-#include <stdio.h>
-
-int	main(int argc, char **argv)
+void	ft_swap(t_stack *stack)
 {
-	t_stack	*a;
-	t_stack	*index;
-
-	if (argc <= 1)
-		ft_error_exit();
-	a = init_stack();
-	setting_stack(argc, argv, a);
-	print_stack(a);
-	printf("\n");
-	index = init_stack();
-	setting_stack(argc, argv, index);
-	print_stack(index);
-	printf("\n");
-	arr_indexing(a, index);
-	print_stack(a);
-	printf("\n");
-
-	return (0);
+	int	temp;
+	
+	if (stack->count == 1)
+		return ;
+	temp = stack->arr[stack->count - 1];
+	stack->arr[stack->count - 1] = stack->arr[stack->count - 2];
+	stack->arr[stack->count - 2] = temp;
 }

@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 19:42:31 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/08 17:28:53 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/09 13:13:20 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,24 +30,29 @@ t_stack	*init_stack(void)
 	return (stack);
 }
 
-void	push_stack(t_stack *stack, int value)
+int	push_stack(t_stack *stack, int value)
 {
+	int	i;
 	int	*temp;
 
+	i = 0;
+	while (i < stack->count)
+	{
+		if (stack->arr[i++] == value)
+			return (-1);
+	}
 	if(stack->count >= stack->max)
 	{
 		temp = (int *)malloc(sizeof(int) * stack->max * 2);
 		if (!temp)
-		{
-			terminate_stack(stack);
-			ft_error_exit();
-		}
+			return (-1);
 		ft_memcpy(temp, stack->arr, stack->count);
 		free(stack->arr);
 		stack->arr = temp;
 		stack->max *= 2;
 	}
 	stack->arr[stack->count++] = value;
+	return (0);
 }
 
 int	pop_stack(t_stack *stack)
@@ -59,10 +64,15 @@ int	pop_stack(t_stack *stack)
 	return (temp);
 }
 
-/*print stack 함수 만들기*/
-
-void	terminate_stack(t_stack *stack)
+/*print stack 함수 for 확인용*/
+#include <stdio.h>
+void	print_stack(t_stack *stack)
 {
-	free(stack->arr);
-	free(stack);
+	stack->count -= 1;
+	while (stack->count >= 0)
+	{
+		printf("[%d] : %d ",
+				stack->count, stack->arr[stack->count]);
+		stack->count--;
+	}
 }
