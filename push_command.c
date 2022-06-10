@@ -6,19 +6,29 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 10:52:21 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/09 16:12:24 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/10 20:11:21 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_swap(t_stack *stack)
+void	ft_push(t_stack *a, t_stack *b)
 {
-	int	temp;
-	
-	if (stack->count == 1)
+	if (b->count == 0)
 		return ;
-	temp = stack->arr[stack->count - 1];
-	stack->arr[stack->count - 1] = stack->arr[stack->count - 2];
-	stack->arr[stack->count - 2] = temp;
+	a->arr[a->count] = b->arr[b->count - 1];
+	a->count += 1;
+	b->count -= 1;
+}
+
+void	pa(t_stack *a, t_stack *b)
+{
+	ft_push(a, b);
+	ft_putstr_fd("pa\n", 1);
+}
+
+void	pb(t_stack *a, t_stack *b)
+{
+	ft_push(b, a);
+	ft_putstr_fd("pb\n", 1);
 }

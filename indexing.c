@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 16:47:02 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/09 20:01:23 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/10 17:35:37 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_bubble_sort(int *arr, int end)
 	}
 }
 
-void	arr_indexing(t_stack *a, t_stack *index)
+void	insert_index(t_stack *a, t_stack *index)
 {
 	int	i;
 	int	j;
@@ -42,7 +42,10 @@ void	arr_indexing(t_stack *a, t_stack *index)
 		while (j < index->count)
 		{
 			if (a->arr[i] == index->arr[j])
-				a->arr[i] = j;
+				{
+					a->arr[i] = j;
+					break ;
+				}
 			j++;
 		}
 		i++;

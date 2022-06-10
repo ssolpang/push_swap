@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 13:12:51 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/09 18:58:10 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/10 17:40:55 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	reverse_arr(t_stack *stack)
 	}
 }
 
-void	setting_stack(int argc, char **argv, t_stack *a)
+void	parse_args(int argc, char **argv, t_stack *a)
 {
 	int		i;
 	int		j;
@@ -82,4 +82,15 @@ void	setting_stack(int argc, char **argv, t_stack *a)
 		free(temp);
 	}
 	reverse_arr(a);
+}
+
+void	make_stack_a(t_stack *a, int argc, char **argv)
+{
+	t_stack	*index;
+
+	index = init_stack();
+	parse_args(argc, argv, index);
+	parse_args(argc, argv, a);
+	insert_index(a, index);
+	terminate_stack(index);
 }

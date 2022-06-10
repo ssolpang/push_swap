@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 19:42:31 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/09 13:13:20 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/10 17:11:13 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,14 @@ int	pop_stack(t_stack *stack)
 #include <stdio.h>
 void	print_stack(t_stack *stack)
 {
-	stack->count -= 1;
-	while (stack->count >= 0)
+	int	i;
+
+	i = stack->count - 1;
+	while (i >= 0)
 	{
 		printf("[%d] : %d ",
-				stack->count, stack->arr[stack->count]);
-		stack->count--;
+				i, stack->arr[i]);
+		i--;
 	}
+	printf("\n");
 }

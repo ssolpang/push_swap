@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:59:02 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/09 20:01:22 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/10 17:08:53 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ typedef struct s_stack
 } t_stack;
 
 /*parsing.c*/
-void	setting_stack(int argc, char **argv, t_stack *a);
+void	parse_args(int argc, char **argv, t_stack *a);
+void	make_stack_a(t_stack *a, int argc, char **argv);
 
 /*stack.c*/
 t_stack	*init_stack(void);
@@ -53,6 +54,6 @@ void	exit_all(char **temp, int j, t_stack *stack);
 
 /*indexing.c*/
 void	ft_bubble_sort(int *arr, int end);
-void	arr_indexing(t_stack *a, t_stack *index);
+void	insert_index(t_stack *a, t_stack *index);
 
 #endif

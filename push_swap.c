@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:58:53 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/09 20:02:36 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/10 17:43:33 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,14 @@
 int	main(int argc, char **argv)
 {
 	t_stack	*a;
-	t_stack	*index;
+	t_stack	*b;
 
 	if (argc <= 1)
 		ft_error_exit();
+
 	a = init_stack();
-	setting_stack(argc, argv, a);
-	print_stack(a);
-	printf("\n");
-	index = init_stack();
-	setting_stack(argc, argv, index);
-	print_stack(index);
-	printf("\n");
-	arr_indexing(a, index);
-	print_stack(a);
-	printf("\n");
+	make_stack_a(a, argc, argv);
+	b = init_stack();
 
 	return (0);
 }
