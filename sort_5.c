@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   sort_5.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/26 10:58:53 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/13 16:35:03 by jkwak            ###   ########.fr       */
+/*   Created: 2022/06/13 14:17:50 by jkwak             #+#    #+#             */
+/*   Updated: 2022/06/13 16:33:00 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-#include <stdio.h>
+/*가장 작은 수를 b 스택으로.
+가장 작은 수가 0, 1, 3, 4번째에 있는 경우의 수 나누기*/
 
-int	main(int argc, char **argv)
+void	check_and_sort_5(t_stack *a, t_stack *b)
 {
-	t_stack	*a;
-	t_stack	*b;
-
-	if (argc <= 1)
-		ft_error_exit();
-
-	a = init_stack();
-	make_stack_a(a, argc, argv);
-	b = init_stack();
-	which_sort(a, b);
-	//
-	/* printf("make_stack_a : ");
-	print_stack(a); */
-	//
-
-	return (0);
+	if (a->arr[a->count - 1] == 0)
+	search_smallest();
 }

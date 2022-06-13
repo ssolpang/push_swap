@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:59:02 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/10 17:08:53 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/13 16:34:09 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "libft/libft.h"
+
+#include <stdio.h>
 
 typedef struct s_stack
 {
@@ -55,5 +57,43 @@ void	exit_all(char **temp, int j, t_stack *stack);
 /*indexing.c*/
 void	ft_bubble_sort(int *arr, int end);
 void	insert_index(t_stack *a, t_stack *index);
+
+/*swap_command.c*/
+void	ft_swap(t_stack *stack);
+void	sa(t_stack *a);
+void	sb(t_stack *b);
+void	ss(t_stack *a, t_stack *b);
+
+/*push_command.c*/
+void	ft_push(t_stack *a, t_stack *b);
+void	pa(t_stack *a, t_stack *b);
+void	pb(t_stack *a, t_stack *b);
+
+/*rotate_command.c*/
+void	ft_rotate(t_stack *a);
+void	ra(t_stack *a);
+void	rb(t_stack *b);
+void	rr(t_stack *a, t_stack *b);
+
+/*reverse_rotate_command.c*/
+void	ft_reverse_rotate(t_stack *a);
+void	rra(t_stack *a);
+void	rrb(t_stack *b);
+void	rrr(t_stack *a, t_stack *b);
+
+/*sort_start.c*/
+int	check_sorted(int *arr, int max);
+
+/*sort_3.c*/
+void	check_and_sort_3(t_stack *a);
+void	top_smallest(t_stack *a);
+void	top_biggest(t_stack *a);
+
+/*sort_5.c*/
+void	check_and_sort_5(t_stack *a, t_stack *b);
+
+/*sort_start.c*/
+void	which_sort(t_stack *a, t_stack *b);
+int	check_sorted(int *arr, int max);
 
 #endif

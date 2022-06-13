@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 17:25:20 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/09 13:54:44 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/13 14:16:13 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_error_exit()
 {
-	ft_putstr_fd("Error\n", 1);
+	ft_putstr_fd("Error\n", 2);
 	exit(1);
 }
 

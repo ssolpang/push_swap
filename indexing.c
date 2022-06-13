@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 16:47:02 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/10 17:35:37 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/13 10:47:58 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_bubble_sort(int *arr, int end)
 		i = 0;
 		while (i < end)
 		{
-			if (arr[i] < arr[i + 1])
+			if (arr[i] > arr[i + 1])
 				ft_simple_swap(&arr[i], &arr[i + 1]);
 			i++;
 		}

@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   sort_start.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/26 10:58:53 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/13 16:35:03 by jkwak            ###   ########.fr       */
+/*   Created: 2022/06/13 16:17:50 by jkwak             #+#    #+#             */
+/*   Updated: 2022/06/13 16:38:42 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-#include <stdio.h>
-
-int	main(int argc, char **argv)
+void	which_sort(t_stack *a, t_stack *b)
 {
-	t_stack	*a;
-	t_stack	*b;
+	if (a->count <= 3)
+		check_and_sort_3(a);
+	if (a->count <= 5)
+		check_and_sort_5(a, b);
+}
 
-	if (argc <= 1)
-		ft_error_exit();
-
-	a = init_stack();
-	make_stack_a(a, argc, argv);
-	b = init_stack();
-	which_sort(a, b);
-	//
-	/* printf("make_stack_a : ");
-	print_stack(a); */
-	//
-
-	return (0);
+int	check_sorted(int *arr, int max)
+{
+	if (max <= 1)
+		return (1);
+	while (--max > 0)
+		if (arr[max - 1] > arr[max])
+			return (0);
+	return (1);
 }
