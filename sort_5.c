@@ -6,17 +6,43 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 14:17:50 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/13 16:33:00 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/14 16:21:35 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*가장 작은 수를 b 스택으로.
-가장 작은 수가 0, 1, 3, 4번째에 있는 경우의 수 나누기*/
-
 void	check_and_sort_5(t_stack *a, t_stack *b)
 {
-	if (a->arr[a->count - 1] == 0)
-	search_smallest();
+	push_smaller_2_b(a, b);
+	check_and_sort_3(a);
+	while (b->count > 0)
+		pa(a, b);
+}
+
+void	push_smaller_2_b(t_stack *a, t_stack *b)
+{
+	while (a->count > 3)
+	{
+		if (search_smallest_index(a) == 0)
+		{
+			rra(a);
+			pb(a, b);
+		}
+		else if (search_smallest_index(a) == 1)
+		{
+			rra(a);
+			rra(a);
+			pb(a, b);
+		}
+		else if (search_smallest_index(a) == a->count - 1)
+		{
+			pb(a, b);
+		}
+		else if (search_smallest_index(a) == a->count - 2)
+		{
+			ra(a);
+			pb(a, b);
+		}
+	}
 }

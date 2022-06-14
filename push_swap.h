@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:59:02 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/13 16:34:09 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/14 15:16:39 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,9 @@ void	rrb(t_stack *b);
 void	rrr(t_stack *a, t_stack *b);
 
 /*sort_start.c*/
-int	check_sorted(int *arr, int max);
+void	which_sort(t_stack *a, t_stack *b);
+int		check_sorted(int *arr, int max);
+int		search_smallest_index(t_stack *a);;
 
 /*sort_3.c*/
 void	check_and_sort_3(t_stack *a);
@@ -91,9 +93,6 @@ void	top_biggest(t_stack *a);
 
 /*sort_5.c*/
 void	check_and_sort_5(t_stack *a, t_stack *b);
-
-/*sort_start.c*/
-void	which_sort(t_stack *a, t_stack *b);
-int	check_sorted(int *arr, int max);
+void	push_smaller_2_b(t_stack *a, t_stack *b);
 
 #endif
