@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 16:17:50 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/15 09:40:45 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/15 20:22:08 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	which_sort(t_stack *a, t_stack *b)
 		check_and_sort_5(a, b);
 }
 
-/*t_stack *a를 인자로 받도록 바꾸기*/
 int	check_sorted(t_stack *a)
 {
 	int	i;
