@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:59:02 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/14 15:16:39 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/15 09:42:48 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,8 @@ void	rrr(t_stack *a, t_stack *b);
 
 /*sort_start.c*/
 void	which_sort(t_stack *a, t_stack *b);
-int		check_sorted(int *arr, int max);
-int		search_smallest_index(t_stack *a);;
+int		check_sorted(t_stack *a);
+int		search_smallest_index(t_stack *a);
 
 /*sort_3.c*/
 void	check_and_sort_3(t_stack *a);

@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 16:17:50 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/14 16:23:44 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/15 09:40:45 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	which_sort(t_stack *a, t_stack *b)
 {
-	if (check_sorted(a->arr, a->count))
+	if (check_sorted(a))
 		return ;
 	if (a->count <= 3)
 		check_and_sort_3(a);
@@ -23,13 +23,19 @@ void	which_sort(t_stack *a, t_stack *b)
 }
 
 /*t_stack *a를 인자로 받도록 바꾸기*/
-int	check_sorted(int *arr, int max)
+int	check_sorted(t_stack *a)
 {
-	if (max <= 1)
+	int	i;
+
+	if (a->count < 2)
 		return (1);
-	while (--max > 0)
-		if (arr[max - 1] < arr[max])
+	i = a->count - 1;
+	while (i > 0)
+	{
+		if (a->arr[i - 1] < a->arr[i])
 			return (0);
+		i--;
+	}
 	return (1);
 }
 

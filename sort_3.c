@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 13:06:53 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/14 10:39:43 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/15 09:41:01 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	top_biggest(t_stack *a)
 
 void	check_and_sort_3(t_stack *a)
 {
-	if (check_sorted(a->arr, a->count))
+	if (check_sorted(a))
 		return ;
 	if (a->count == 2)
 		sa(a);
