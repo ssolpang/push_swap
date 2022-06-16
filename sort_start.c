@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 16:17:50 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/15 20:22:08 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/16 14:53:33 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	which_sort(t_stack *a, t_stack *b)
 		check_and_sort_3(a);
 	else if (a->count <= 5)
 		check_and_sort_5(a, b);
+	else
+		check_and_sort_more(a, b);
 }
 
 int	check_sorted(t_stack *a)

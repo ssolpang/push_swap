@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jkwak <jkwak@student.42.fr>                +#+  +:+       +#+         #
+#    By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/05/26 10:59:19 by jkwak             #+#    #+#              #
-#    Updated: 2022/06/05 22:41:00 by jkwak            ###   ########.fr        #
+#    Created: 2022/06/16 09:46:06 by jkwak             #+#    #+#              #
+#    Updated: 2022/06/16 14:08:34 by jkwak            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,9 @@ RM = rm -rf
 all : $(NAME)
 
 bonus :
+
+debug :
+	gcc -g3 -fsanitize=address main.c -o main
 
 $(LIBFT) :
 			make -C $(LIBFT_DIR)

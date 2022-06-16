@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:59:02 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/15 09:42:48 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/16 14:57:03 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,10 @@ void	top_biggest(t_stack *a);
 /*sort_5.c*/
 void	check_and_sort_5(t_stack *a, t_stack *b);
 void	push_smaller_2_b(t_stack *a, t_stack *b);
+
+/*sort_more.c*/
+void	push_all_2_b(t_stack *a, t_stack *b);
+void	push_all_2_a(t_stack *a, t_stack *b);
+void	check_and_sort_more(t_stack *a, t_stack *b);
 
 #endif
