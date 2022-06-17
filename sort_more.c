@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 09:52:43 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/16 17:09:07 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/17 10:19:06 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,10 @@ void	push_all_2_a(t_stack *a, t_stack *b)
 			i++;
 		while (b->arr[j] != (b->count - 1))
 			j++;
-		if (i <= j)//while (i--)
+		if (i <= j)
 			while (b->arr[b->count - 1] != b->count - 1)
 				rb(b);
-		else//while (j-- + 1)
+		else
 			while (b->arr[b->count - 1] != b->count - 1)
 				rrb(b);
 		pa(a, b);

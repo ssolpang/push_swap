@@ -6,8 +6,7 @@ cc -Wall -Werror -Wextra   -c -o parsing.o parsing.c
 cc -Wall -Werror -Wextra   -c -o add_libft.o add_libft.c
 make -C libft
 cp libft/libft.a .
+make: Leaving directory `/Users/jkwak/push_swap'
  
 make: *** No rule to make target `utils.o', needed by `push_swap'.
 
-make: Leaving directory `/Users/jkwak/push_swap'
- 

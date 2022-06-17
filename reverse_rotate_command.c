@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 10:53:37 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/10 20:22:03 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/17 10:13:56 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 void	ft_reverse_rotate(t_stack *a)
 {
-	int	*temp;
+	int	i;
+	int	temp;
 
-	if ((a->count == 0) || (a->count == 1))
+	if (a->count < 2)
 		return ;
-	temp = (int *)malloc(sizeof(int) * (a->count));
-		if (!temp)
-			ft_error_exit();
-	ft_memcpy(temp, a->arr + 1, sizeof(int) * (a->count - 1));
-	temp[a->count - 1] = a->arr[0];
-	free(a->arr);
-	a->arr = temp;
+	temp = a->arr[0];
+	i = 0;
+	while (i < (a->count - 1))
+	{
+		a->arr[i] = a->arr[i + 1];
+		i++;
+	}
+	a->arr[a->count - 1] = temp;
 }
 
 void	rra(t_stack *a)

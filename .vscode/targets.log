@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `push_swap.o', needed by `push_swap'.  Stop.
 
 
-# Make data base, printed on Thu Jun 16 14:09:12 2022
+# Make data base, printed on Fri Jun 17 12:28:00 2022
 
 # Variables
 
@@ -45,15 +45,15 @@ VSCODE_VERBOSE_LOGGING = true
 # makefile (from `Makefile', line 19)
 OBJS = push_swap.o parsing.o utils.o add_libft.o
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cmt000356h/T/vscode-ipc-a7ed1a2f-6b62-4def-a4fa-286687a12121.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cmt000356h/T/vscode-ipc-1dde36e5-9215-40eb-aed3-78554d539dad.sock
 # environment
-VSCODE_CWD = /Users/jkwak/push_swap
+VSCODE_CWD = /
 # environment
-PATH = /Users/jkwak/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/jkwak/.brew/bin
+PATH = /Users/jkwak/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-LaunchInstanceID = 8988C8C3-ADD2-40FD-A327-7656C8DAF53E
+LaunchInstanceID = 079B95F1-0AA2-4C53-946A-78AA0B778876
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -63,7 +63,7 @@ ELECTRON_RUN_AS_NODE = 1
 # makefile (from `Makefile', line 22)
 LIBFT_DIR = libft
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.p1BhNUpvZk/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.M5avW6oJSg/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -83,7 +83,7 @@ VSCODE_CODE_CACHE_PATH = /Users/jkwak/Library/Application Support/Code/CachedDat
 # environment
 LOGNAME = jkwak
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 ZSH = /Users/jkwak/.oh-my-zsh
 # environment
@@ -92,17 +92,14 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
 XPC_FLAGS = 0x0
-# environment
-COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
-# environment
-LC_TERMINAL = iTerm2
+# default
+MAKECMDGOALS := all
 # makefile (from `Makefile', line 18)
 SRCS = push_swap.c parsing.c utils.c add_libft.c
 # environment
-SHLVL = 2
- 
+SHLVL = 1
 # makefile (from `Makefile', line 21)
 LIBFT = libft.a
 # makefile (from `Makefile', line 24)
@@ -113,10 +110,6 @@ MAKE_VERSION := 3.81
 USER = jkwak
 # makefile
 .DEFAULT_GOAL := all
-# default
-MAKECMDGOALS := all
-# environment
-TERM_SESSION_ID = w0t0p0:B80CF636-1296-4BA1-9428-F7EEAED92027
 # makefile (from `Makefile', line 16)
 NAME = push_swap
 # environment
@@ -125,8 +118,6 @@ LESS = -R
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
-# environment
-TERM_PROGRAM = iTerm.app
 # default
 .VARIABLES := 
 # environment
@@ -142,21 +133,13 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-TERM_PROGRAM_VERSION = 3.3.7
-# environment
 MAIL = jkwak@student.42seoul.kr
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.2344.04E2EDDD-0C5F-48A9-A41A-022917DDFA1C
-# environment
-LC_TERMINAL_VERSION = 3.3.7
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000002.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
-# environment
-ITERM_SESSION_ID = w0t0p0:B80CF636-1296-4BA1-9428-F7EEAED92027
-# environment
-COLORFGBG = 15;0
 # environment
 __CF_USER_TEXT_ENCODING = 0x194D0:0x0:0x0
 # environment
@@ -165,8 +148,6 @@ COMMAND_MODE = unix2003
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
-# environment
-ITERM_PROFILE = Default
 # environment
 PAGER = less
 # environment
@@ -186,9 +167,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 8468
+VSCODE_PID = 3128
 # variable set hash-table stats:
-# Load=86/1024=8%, Rehash=0, Collisions=6/115=5%
+# Load=77/1024=8%, Rehash=0, Collisions=3/106=3%
 
 # Pattern-specific Variable Values
 
@@ -196,9 +177,9 @@ VSCODE_PID = 8468
 
 # Directories
 
-# . (device 16777225, inode 1106525): 30 files, no impossibilities.
+# . (device 16777225, inode 1106525): 27 files, no impossibilities.
 
-# 30 files, no impossibilities in 1 directories.
+# 27 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -340,8 +321,9 @@ parsing.o:
 # # of strings in strcache: 1
 # # of strcache buffers: 1
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+ 
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jun 16 14:09:12 2022
+# Finished Make data base on Fri Jun 17 12:28:00 2022
 
  
