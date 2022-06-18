@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:59:02 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/16 14:57:03 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/18 18:12:49 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "libft/libft.h"
-
-#include <stdio.h>
 
 typedef struct s_stack
 {
@@ -34,8 +32,6 @@ void	make_stack_a(t_stack *a, int argc, char **argv);
 t_stack	*init_stack(void);
 int		push_stack(t_stack *stack, int value);
 int		pop_stack(t_stack *stack);
-/*확인용 프린트 함수, 삭제 예정*/
-void	print_stack(t_stack *stack);
 
 /*add_libft.c*/
 int 	ft_is_white(int c);

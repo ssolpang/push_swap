@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 13:12:51 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/13 10:15:02 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/18 18:10:58 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	check_blank_argv(char *s, t_stack *a)
 int	check_not_number(char *str)
 {
 	int				i;
-	long long int	nbr;
 
 	i = 0;
 	if ((str[i] == '+') || (str[i] == '-'))
@@ -44,7 +43,6 @@ void	reverse_arr(t_stack *stack)
 {
 	int	front;
 	int	rear;
-	int	temp;
 
 	front = 0;
 	rear = stack->count - 1;
