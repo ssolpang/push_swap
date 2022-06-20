@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Sat Jun 18 18:10:29 2022
+# Make data base, printed on Mon Jun 20 14:34:12 2022
 
 # Variables
 
@@ -16,7 +16,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
- 
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -26,13 +25,13 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /Users/solpang/push_swap
+CURDIR := /Users/jkwak/push_swap
 # makefile
 SHELL = /bin/sh
 # makefile (from `Makefile', line 44)
 RM = rm -rf
 # environment
-VSCODE_NLS_CONFIG = {"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"26f3b44ea4f1e942cca002e9545643cc.ko","_translationsConfigFile":"/Users/solpang/Library/Application Support/Code/clp/26f3b44ea4f1e942cca002e9545643cc.ko/tcf.json","_cacheRoot":"/Users/solpang/Library/Application Support/Code/clp/26f3b44ea4f1e942cca002e9545643cc.ko","_resolvedLanguagePackCoreLocation":"/Users/solpang/Library/Application Support/Code/clp/26f3b44ea4f1e942cca002e9545643cc.ko/4af164ea3a06f701fe3e89a2bcbb421d2026b68f","_corruptedFile":"/Users/solpang/Library/Application Support/Code/clp/26f3b44ea4f1e942cca002e9545643cc.ko/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"738ac08552cca045871a73764b8c446f.ko","_translationsConfigFile":"/Users/jkwak/Library/Application Support/Code/clp/738ac08552cca045871a73764b8c446f.ko/tcf.json","_cacheRoot":"/Users/jkwak/Library/Application Support/Code/clp/738ac08552cca045871a73764b8c446f.ko","_resolvedLanguagePackCoreLocation":"/Users/jkwak/Library/Application Support/Code/clp/738ac08552cca045871a73764b8c446f.ko/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/Users/jkwak/Library/Application Support/Code/clp/738ac08552cca045871a73764b8c446f.ko/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 43)
@@ -43,22 +42,20 @@ MAKEFILE_LIST :=  Makefile
 VSCODE_VERBOSE_LOGGING = true
 # makefile (from `Makefile', line 17)
 BONUS = checker
+# makefile (from `Makefile', line 37)
+OBJS = $(SRCS:.c=.o)
 # environment
-__CFBundleIdentifier = com.microsoft.VSCode
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cmt000356h/T/vscode-ipc-aa9ef807-b8e3-4b69-86cd-6a96f7ed68f0.sock
 # environment
-INFOPATH = /opt/homebrew/share/info:/opt/homebrew/share/info:
+VSCODE_CWD = /
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/87/t6g9lc990pxbhxmybry4mbbw0000gn/T/vscode-ipc-b489c569-2056-4f3e-8c1a-b9a75a0db70c.sock
-# environment
-VSCODE_CWD = /Users/solpang/push_swap
-# environment
-PATH = /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/opt/homebrew/bin:/opt/homebrew/sbin
+PATH = /Users/jkwak/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
-# environment
-SPACESHIP_VERSION = 3.16.1
 # makefile (from `Makefile', line 40)
 OBJS_B = 
+# environment
+LaunchInstanceID = F9948B84-FE31-43CF-A0C7-8846042FBAF8
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -68,51 +65,43 @@ ELECTRON_RUN_AS_NODE = 1
 # makefile (from `Makefile', line 20)
 LIBFT_DIR = libft
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.c5Ayhr03dZ/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.oXmNmVFQ8r/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
 VSCODE_PIPE_LOGGING = true
-# makefile (from `Makefile', line 37)
-OBJS = $(SRCS:.c=.o)
 # environment
-PWD = /Users/solpang/push_swap
-# environment
-HOMEBREW_CELLAR = /opt/homebrew/Cellar
+PWD = /Users/jkwak/push_swap
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
-MANPATH = /opt/homebrew/share/man:/usr/share/man:/usr/local/share/man:/opt/homebrew/share/man:
-# environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /Users/solpang
+HOME = /Users/jkwak
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/solpang/Library/Application Support/Code/CachedData/4af164ea3a06f701fe3e89a2bcbb421d2026b68f
+VSCODE_CODE_CACHE_PATH = /Users/jkwak/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
-LOGNAME = solpang
+LOGNAME = jkwak
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
-ZSH = /Users/solpang/.oh-my-zsh
+ZSH = /Users/jkwak/.oh-my-zsh
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
 XPC_FLAGS = 0x0
-# environment
-COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
-# environment
-LC_TERMINAL = iTerm2
+# default
+MAKECMDGOALS := all
 # makefile (from `Makefile', line 22)
 SRCS = indexing.c parsing_utils.c parsing.c push_command.c push_swap.c reverse_rotate_command.c rotate_command.c sort_3.c sort_5.c sort_more.c sort_start.c split_4_ps.c stack.c swap_command.c terminate.c
 # environment
-SHLVL = 2
+SHLVL = 1
 # makefile (from `Makefile', line 19)
 LIBFT = libft.a
 # makefile (from `Makefile', line 42)
@@ -123,10 +112,6 @@ MAKE_VERSION := 3.81
 USER = jkwak
 # makefile
 .DEFAULT_GOAL := all
-# default
-MAKECMDGOALS := all
-# environment
-TERM_SESSION_ID = w0t0p0:6A07F71E-EEE6-4BCA-AC49-42C7773AEF8D
 # makefile (from `Makefile', line 16)
 NAME = push_swap
 # environment
@@ -135,17 +120,14 @@ LESS = -R
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
-# environment
- 
-TERM_PROGRAM = iTerm.app
 # default
 .VARIABLES := 
 # environment
-TMPDIR = /var/folders/87/t6g9lc990pxbhxmybry4mbbw0000gn/T/
+TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n000cmt000356h/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/solpang/Library/Application Support/Code/1.68.0-main.sock
+VSCODE_IPC_HOOK = /Users/jkwak/Library/Application Support/Code/1.67.2-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -153,27 +135,15 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-TERM_PROGRAM_VERSION = 3.4.15
-# environment
 MAIL = jkwak@student.42seoul.kr
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.5733010.5733017.7083D97B-6F3B-4852-9A07-C36AC2771F5F
-# environment
-LC_TERMINAL_VERSION = 3.4.15
-# environment
-HOMEBREW_PREFIX = /opt/homebrew
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000002.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
-ITERM_SESSION_ID = w0t0p0:6A07F71E-EEE6-4BCA-AC49-42C7773AEF8D
-# environment
-HOMEBREW_REPOSITORY = /opt/homebrew
-# environment
-COLORFGBG = 15;0
-# environment
-__CF_USER_TEXT_ENCODING = 0x1F5:0x3:0x33
+__CF_USER_TEXT_ENCODING = 0x194D0:0x0:0x0
 # environment
 COMMAND_MODE = unix2003
 # default
@@ -181,19 +151,19 @@ MAKEFILES :=
 # automatic
 <F = $(notdir $<)
 # environment
-ITERM_PROFILE = Default
-# environment
 PAGER = less
 # environment
 LC_ALL = C
 # environment
-SPACESHIP_ROOT = /Users/solpang/.oh-my-zsh/custom/themes/spaceship-prompt
+SECURITYSESSIONID = 186a5
 # automatic
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
 # makefile (from `Makefile', line 39)
 SRCS_B = 
+# default
+.INCLUDE_DIRS = /usr/local/include
 # environment
 MAKELEVEL := 0
 # environment
@@ -201,9 +171,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 1394
+VSCODE_PID = 1307
 # variable set hash-table stats:
-# Load=94/1024=9%, Rehash=0, Collisions=8/131=6%
+# Load=80/1024=8%, Rehash=0, Collisions=3/118=3%
 
 # Pattern-specific Variable Values
 
@@ -211,9 +181,9 @@ VSCODE_PID = 1394
 
 # Directories
 
-# . (device 16777232, inode 5745395): 29 files, no impossibilities.
+# . (device 16777225, inode 1151703): 42 files, no impossibilities.
 
-# 29 files, no impossibilities in 1 directories.
+# 42 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -225,6 +195,15 @@ VSCODE_PID = 1394
 # 1 implicit rules, 0 (0.0%) terminal.
 
 # Files
+
+# Not a target:
+push_swap.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-20 13:36:22
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 sort_3.o:
@@ -250,7 +229,7 @@ all: push_swap
 # Not a target:
 parsing.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 17:21:35
+#  Last modified 2022-06-20 11:19:45
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -271,7 +250,7 @@ sort_start.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 18:09:43
+#  Last modified 2022-06-20 09:10:59
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -284,9 +263,18 @@ sort_5.o:
 #  File has not been updated.
 
 # Not a target:
+push_command.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-20 13:14:53
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
 indexing.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 17:21:35
+#  Last modified 2022-06-20 09:10:59
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -325,6 +313,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+ 
 #  commands to execute (from `Makefile', line 71):
 	$(RM) $(NAME) $(LIBFT)
 	make fclean -C $(LIBFT_DIR)
@@ -339,7 +328,7 @@ swap_command.o:
 parsing_utils.o: parsing_utils.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `parsing_utils'
-#  Last modified 2022-06-18 18:10:15
+#  Last modified 2022-06-20 13:05:17
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -347,7 +336,6 @@ parsing_utils.o: parsing_utils.c
 #  commands to execute (from `Makefile', line 47):
 	$(CC) $(CFLAGS) -c $< -o $@
 	
- 
 
 # Not a target:
 split_4_ps.o:
@@ -395,15 +383,37 @@ reverse_rotate_command.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-push_swap.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+push_swap.o: push_swap.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `push_swap'
+#  Last modified 2022-06-20 13:05:17
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := push_swap.o
+# automatic
+# % := 
+# automatic
+# * := push_swap
+# automatic
+# + := push_swap.c
+# automatic
+# | := 
+# automatic
+# < := push_swap.c
+# automatic
+# ^ := push_swap.c
+# automatic
+# ? := push_swap.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+#  commands to execute (from `Makefile', line 47):
+	$(CC) $(CFLAGS) -c $< -o $@
+	
 
 push_swap: indexing.o parsing_utils.o parsing.o push_command.o push_swap.o reverse_rotate_command.o rotate_command.o sort_3.o sort_5.o sort_more.o sort_start.o split_4_ps.o stack.o swap_command.o terminate.o libft.a
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  Last modified 2022-06-20 13:28:33
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
@@ -415,7 +425,7 @@ push_swap: indexing.o parsing_utils.o parsing.o push_command.o push_swap.o rever
 # Not a target:
 parsing_utils.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 17:21:35
+#  Last modified 2022-06-20 09:10:59
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -424,27 +434,11 @@ parsing_utils.c:
 parsing.o: parsing.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `parsing'
-#  File does not exist.
+#  Last modified 2022-06-20 13:05:17
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := parsing.o
-# automatic
-# % := 
-# automatic
-# * := parsing
-# automatic
-# + := parsing.c
-# automatic
-# | := 
-# automatic
-# < := parsing.c
-# automatic
-# ^ := parsing.c
-# automatic
-# ? := parsing.c
+#  Successfully updated.
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 #  commands to execute (from `Makefile', line 47):
 	$(CC) $(CFLAGS) -c $< -o $@
 	
@@ -461,16 +455,22 @@ stack.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-push_command.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+push_command.o: push_command.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `push_command'
+#  Last modified 2022-06-20 13:28:33
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 47):
+	$(CC) $(CFLAGS) -c $< -o $@
+	
 
 indexing.o: indexing.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `indexing'
-#  Last modified 2022-06-18 18:10:15
+#  Last modified 2022-06-20 13:05:17
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -486,7 +486,7 @@ terminate.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=31/1024=3%, Rehash=0, Collisions=2/77=3%
+# Load=33/1024=3%, Rehash=0, Collisions=2/85=2%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -498,6 +498,6 @@ terminate.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat Jun 18 18:10:29 2022
+# Finished Make data base on Mon Jun 20 14:34:12 2022
 
  

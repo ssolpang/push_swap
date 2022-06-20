@@ -6,19 +6,20 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 10:52:21 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/18 17:50:09 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/20 13:14:53 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_push(t_stack *a, t_stack *b)
+void	ft_push(t_stack *to, t_stack *from)
 {
-	if (!b->count)
+	int	temp;
+
+	if (!from->count)
 		return ;
-	a->arr[a->count] = b->arr[b->count - 1];
-	a->count += 1;
-	b->count -= 1;
+	temp = pop_stack(from);
+	push_stack(to, temp);
 }
 
 void	pa(t_stack *a, t_stack *b)
