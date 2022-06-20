@@ -6,30 +6,40 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 09:52:43 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/20 14:48:30 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/20 22:34:43 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* int	better_rotate(t_stack *a)
+int	better_rotate(t_stack *a)
 {
-	int	half;
 	int	top;
 	int	bottom;
+	int	rotate;
+	int	reverse_rotate;
 	int	i;
 
-	half = a->count / 2;
-	top = a->count - 1;
+	top = 0;
 	bottom = 0;
-	i = 0;
-	while (top > half)
-		if (a->arr[top--] == i)
-			break ;
-	while (bottom <= half)
-		if (a->arr[bottom++] == i)
-			break ;
-} */
+	rotate = 0;
+	reverse_rotate = 0;
+	i = -1;
+	while (++i < (a->count / 2))
+	{
+		while (a->arr[(a->count - 1) - top] != i)
+			top++;
+		while (a->arr[bottom] != i)
+			bottom++;
+		if (top < bottom)
+			rotate++;
+		else
+			reverse_rotate++;
+	}
+	if (rotate >= reverse_rotate)
+		return (1);
+	return (2);
+}
 
 int	optimal_chunk(int size)
 {
@@ -42,19 +52,24 @@ int	optimal_chunk(int size)
 void	push_all_2_b(t_stack *a, t_stack *b)
 {
 	int	chunk;
+	int	which_rotate;
 
 	chunk = optimal_chunk(a->count);
+	which_rotate = better_rotate(a);
 	while (a->count)
 	{
 		if (a->arr[a->count - 1] <= b->count)
 			pb(a, b);
 		else if (a->arr[a->count - 1] >= (b->count + chunk))
-			ra(a);
+				if (which_rotate == 1)
+					ra(a);
+				else
+					rra(a);
 		else
-			{
-				pb(a, b);
-				rb(b);
-			}
+		{
+			pb(a, b);
+			rb(b);
+		}
 	}
 }
 

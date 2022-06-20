@@ -1,5 +1,5 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/jkwak/push_swap'
+make: Entering directory `/Users/solpang/push_swap'
 cc -Wall -Werror -Wextra -c indexing.c -o indexing.o
  
 cc -Wall -Werror -Wextra -c parsing_utils.c -o parsing_utils.o
@@ -10,15 +10,18 @@ cc -Wall -Werror -Wextra -c reverse_rotate_command.c -o reverse_rotate_command.o
 cc -Wall -Werror -Wextra -c rotate_command.c -o rotate_command.o
 cc -Wall -Werror -Wextra -c sort_3.c -o sort_3.o
 cc -Wall -Werror -Wextra -c sort_5.c -o sort_5.o
+ 
 cc -Wall -Werror -Wextra -c sort_more.c -o sort_more.o
 cc -Wall -Werror -Wextra -c sort_start.c -o sort_start.o
- 
 cc -Wall -Werror -Wextra -c split_4_ps.c -o split_4_ps.o
+ 
 cc -Wall -Werror -Wextra -c stack.c -o stack.o
+ 
 cc -Wall -Werror -Wextra -c swap_command.c -o swap_command.o
 cc -Wall -Werror -Wextra -c terminate.c -o terminate.o
 make -C libft
 cp libft/libft.a .
 cc -Wall -Werror -Wextra -o push_swap indexing.o parsing_utils.o parsing.o push_command.o push_swap.o reverse_rotate_command.o rotate_command.o sort_3.o sort_5.o sort_more.o sort_start.o split_4_ps.o stack.o swap_command.o terminate.o libft.a
-make: Leaving directory `/Users/jkwak/push_swap'
+ 
+make: Leaving directory `/Users/solpang/push_swap'
  
