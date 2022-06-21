@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:59:02 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/18 18:12:49 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/21 14:19:35 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,26 +56,26 @@ void	insert_index(t_stack *a, t_stack *index);
 
 /*swap_command.c*/
 void	ft_swap(t_stack *stack);
-void	sa(t_stack *a);
-void	sb(t_stack *b);
-void	ss(t_stack *a, t_stack *b);
+void	sa(t_stack *a, char *s);
+void	sb(t_stack *b, char *s);
+void	ss(t_stack *a, t_stack *b, char *s);
 
 /*push_command.c*/
 void	ft_push(t_stack *a, t_stack *b);
-void	pa(t_stack *a, t_stack *b);
-void	pb(t_stack *a, t_stack *b);
+void	pa(t_stack *a, t_stack *b, char *s);
+void	pb(t_stack *a, t_stack *b, char *s);
 
 /*rotate_command.c*/
 void	ft_rotate(t_stack *a);
-void	ra(t_stack *a);
-void	rb(t_stack *b);
-void	rr(t_stack *a, t_stack *b);
+void	ra(t_stack *a, char *s);
+void	rb(t_stack *b, char *s);
+void	rr(t_stack *a, t_stack *b, char *s);
 
 /*reverse_rotate_command.c*/
 void	ft_reverse_rotate(t_stack *a);
-void	rra(t_stack *a);
-void	rrb(t_stack *b);
-void	rrr(t_stack *a, t_stack *b);
+void	rra(t_stack *a, char *s);
+void	rrb(t_stack *b, char *s);
+void	rrr(t_stack *a, t_stack *b, char *s);
 
 /*sort_start.c*/
 void	which_sort(t_stack *a, t_stack *b);
@@ -95,5 +95,7 @@ void	push_smaller_2_b(t_stack *a, t_stack *b);
 void	push_all_2_b(t_stack *a, t_stack *b);
 void	push_all_2_a(t_stack *a, t_stack *b);
 void	check_and_sort_more(t_stack *a, t_stack *b);
+
+/*checker.c*/
 
 #endif

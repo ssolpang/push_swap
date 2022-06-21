@@ -6,7 +6,7 @@
 #    By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/16 09:46:06 by jkwak             #+#    #+#              #
-#    Updated: 2022/06/18 18:09:43 by jkwak            ###   ########.fr        #
+#    Updated: 2022/06/21 16:52:59 by jkwak            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,8 +36,22 @@ SRCS		= indexing.c \
 			  terminate.c
 OBJS		= $(SRCS:.c=.o)
 
-SRCS_B		=
-OBJS_B		=
+SRCS_B		= checker.c \
+			  indexing.c \
+			  parsing.c \
+			  parsing_utils.c \
+			  push_command.c \
+			  reverse_rotate_command.c \
+			  rotate_command.c \
+			  sort_start.c \
+			  sort_3.c \
+			  sort_5.c \
+			  sort_more.c \
+			  split_4_ps.c \
+			  stack.c \
+			  swap_command.c \
+			  terminate.c
+OBJS_B		= $(SRCS_B:.c=.o)
 
 CC			= cc
 CFLAGS		= -Wall -Werror -Wextra

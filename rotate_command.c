@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 10:52:57 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/18 17:44:03 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/21 14:07:19 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,27 +29,27 @@ void	ft_rotate(t_stack *a)
 	a->arr[0] = temp;
 }
 
-void	ra(t_stack *a)
+void	ra(t_stack *a, char *s)
 {
 	if (a->count < 2)
 		return ;
 	ft_rotate(a);
-	ft_putstr_fd("ra\n", 1);
+	ft_putstr_fd(s, 1);
 }
 
-void	rb(t_stack *b)
+void	rb(t_stack *b, char *s)
 {
 	if (b->count < 2)
 		return ;
 	ft_rotate(b);
-	ft_putstr_fd("rb\n", 1);
+	ft_putstr_fd(s, 1);
 }
 
-void	rr(t_stack *a, t_stack *b)
+void	rr(t_stack *a, t_stack *b, char *s)
 {
 	if ((a->count < 2) && (b->count < 2))
 		return ;
 	ft_rotate(a);
 	ft_rotate(b);
-	ft_putstr_fd("rr\n", 1);
+	ft_putstr_fd(s, 1);
 }

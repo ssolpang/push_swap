@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 09:52:43 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/20 22:34:43 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/21 14:12:04 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,23 @@ int	better_rotate(t_stack *a)
 	int	reverse_rotate;
 	int	i;
 
-	top = 0;
-	bottom = 0;
 	rotate = 0;
 	reverse_rotate = 0;
 	i = -1;
 	while (++i < (a->count / 2))
 	{
+		top = 0;
+		bottom = 0;
 		while (a->arr[(a->count - 1) - top] != i)
 			top++;
 		while (a->arr[bottom] != i)
 			bottom++;
-		if (top < bottom)
+		if (top <= bottom)
 			rotate++;
 		else
 			reverse_rotate++;
 	}
-	if (rotate >= reverse_rotate)
+	if (rotate + (a->count / 10) >= reverse_rotate)
 		return (1);
 	return (2);
 }
@@ -59,16 +59,20 @@ void	push_all_2_b(t_stack *a, t_stack *b)
 	while (a->count)
 	{
 		if (a->arr[a->count - 1] <= b->count)
-			pb(a, b);
+			pb(a, b, "pb\n");
 		else if (a->arr[a->count - 1] >= (b->count + chunk))
 				if (which_rotate == 1)
-					ra(a);
+					ra(a, "ra\n");
 				else
-					rra(a);
+					rra(a, "rra\n");
 		else
 		{
-			pb(a, b);
-			rb(b);
+			pb(a, b, "pb\n");
+			if ((a->arr[a->count - 1] >= (b->count + chunk))
+				&& (which_rotate == 1))
+				rr(a, b, "rr\n");
+			else
+				rb(b, "rb\n");
 		}
 	}
 }
@@ -88,11 +92,11 @@ void	push_all_2_a(t_stack *a, t_stack *b)
 			j++;
 		if (i <= j)
 			while (b->arr[b->count - 1] != b->count - 1)
-				rb(b);
+				rb(b, "rb\n");
 		else
 			while (b->arr[b->count - 1] != b->count - 1)
-				rrb(b);
-		pa(a, b);
+				rrb(b, "rrb\n");
+		pa(a, b, "pa\n");
 	}
 }
 
