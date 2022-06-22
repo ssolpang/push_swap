@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 13:06:53 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/21 14:13:29 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/22 09:55:51 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,24 @@ void	check_and_sort_3(t_stack *a)
 	if (a->count == 2)
 		sa(a, "sa\n");
 	else if ((a->arr[2] < a->arr[1]) && (a->arr[2] < a->arr[0]))
+	{
 		if (a->arr[1] < a->arr[0])
 			return ;
 		else
 			top_smallest(a);
+	}
 	else if ((a->arr[2] > a->arr[1]) && (a->arr[2] > a->arr[0]))
+	{
 		if (a->arr[1] < a->arr[0])
 			ra(a, "ra\n");
 		else
 			top_biggest(a);
+	}
 	else
+	{
 		if (a->arr[1] < a->arr[0])
 			sa(a, "sa\n");
 		else
 			rra(a, "rra\n");
+	}
 }

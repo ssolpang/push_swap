@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 16:47:02 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/18 18:28:24 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/22 09:44:50 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ void	insert_index(t_stack *a, t_stack *index)
 		while (j < index->count)
 		{
 			if (a->arr[i] == index->arr[j])
-				{
-					a->arr[i] = j;
-					break ;
-				}
+			{
+				a->arr[i] = j;
+				break ;
+			}
 			j++;
 		}
 		i++;

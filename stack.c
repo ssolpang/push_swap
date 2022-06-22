@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 19:42:31 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/20 11:30:43 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/22 10:05:45 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,30 +30,17 @@ t_stack	*init_stack(void)
 	return (stack);
 }
 
-void	temp_memcpy(int *dst, int *src, int size)
-{
-	int	i;
-
-	i = 0;
-	while (i < size)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-}
-
 int	push_stack(t_stack *stack, int value)
 {
 	int	*temp;
 
 	stack->arr[stack->count++] = value;
-	if(stack->count == stack->max)
+	if (stack->count == stack->max)
 	{
 		temp = (int *)malloc(sizeof(int) * stack->max * 2);
 		if (!temp)
 			return (-1);
-		/* ft_memcpy(temp, stack->arr, sizeof(int) * stack->max); */
-		temp_memcpy(temp, stack->arr, stack->max);
+		ft_memcpy(temp, stack->arr, sizeof(int) * stack->max);
 		free(stack->arr);
 		stack->arr = temp;
 		stack->max *= 2;

@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 10:51:42 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/21 14:06:27 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/22 10:06:00 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_swap(t_stack *stack)
 {
 	int	temp;
-	
+
 	if (stack->count < 2)
 		return ;
 	temp = stack->arr[stack->count - 1];

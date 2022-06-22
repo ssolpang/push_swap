@@ -6,96 +6,78 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:59:02 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/21 14:19:35 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/22 09:51:10 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include <unistd.h>
-#include <stdlib.h>
-#include "libft/libft.h"
+# include <unistd.h>
+# include <stdlib.h>
+# include "libft/libft.h"
 
 typedef struct s_stack
 {
 	int	max;
 	int	count;
 	int	*arr;
-} t_stack;
-
-/*parsing.c*/
-void	parse_args(int argc, char **argv, t_stack *a);
-void	make_stack_a(t_stack *a, int argc, char **argv);
+}	t_stack;
 
 /*stack.c*/
 t_stack	*init_stack(void);
 int		push_stack(t_stack *stack, int value);
 int		pop_stack(t_stack *stack);
 
-/*add_libft.c*/
-int 	ft_is_white(int c);
+/*split_4_ps.c*/
+char	**ft_split_ps(char const *s);
+
+/*parsing.c*/
+void	make_stack_a(t_stack *a, int argc, char **argv);
+
+/*parsing_utils.c*/
+int		ft_is_white(int c);
 void	ft_simple_swap(int *a, int *b);
 int		ft_atoi_ps(char **str, int j, t_stack *a);
 
-/*split_4_ps.c*/
-void	word_clear_ps(char **grp);
-int		word_count_ps(char const *s);
-char	**word_list_ps(char **grp, char const *s, int count);
-char	**ft_split_ps(char const *s);
+/*indexing.c*/
+void	insert_index(t_stack *a, t_stack *index);
 
 /*terminate.c*/
-void	ft_error_exit();
-void	ft_free_double_pointer(char **temp, int j);
+void	ft_error_exit(void);
 void	terminate_stack(t_stack *stack);
 void	exit_all(char **temp, int j, t_stack *stack);
 
-/*indexing.c*/
-void	ft_bubble_sort(int *arr, int end);
-void	insert_index(t_stack *a, t_stack *index);
-
 /*swap_command.c*/
-void	ft_swap(t_stack *stack);
 void	sa(t_stack *a, char *s);
 void	sb(t_stack *b, char *s);
 void	ss(t_stack *a, t_stack *b, char *s);
 
 /*push_command.c*/
-void	ft_push(t_stack *a, t_stack *b);
 void	pa(t_stack *a, t_stack *b, char *s);
 void	pb(t_stack *a, t_stack *b, char *s);
 
 /*rotate_command.c*/
-void	ft_rotate(t_stack *a);
 void	ra(t_stack *a, char *s);
 void	rb(t_stack *b, char *s);
 void	rr(t_stack *a, t_stack *b, char *s);
 
 /*reverse_rotate_command.c*/
-void	ft_reverse_rotate(t_stack *a);
 void	rra(t_stack *a, char *s);
 void	rrb(t_stack *b, char *s);
 void	rrr(t_stack *a, t_stack *b, char *s);
 
 /*sort_start.c*/
-void	which_sort(t_stack *a, t_stack *b);
 int		check_sorted(t_stack *a);
-int		search_smallest_index(t_stack *a);
+void	which_sort(t_stack *a, t_stack *b);
 
 /*sort_3.c*/
 void	check_and_sort_3(t_stack *a);
-void	top_smallest(t_stack *a);
-void	top_biggest(t_stack *a);
 
 /*sort_5.c*/
 void	check_and_sort_5(t_stack *a, t_stack *b);
-void	push_smaller_2_b(t_stack *a, t_stack *b);
 
 /*sort_more.c*/
-void	push_all_2_b(t_stack *a, t_stack *b);
-void	push_all_2_a(t_stack *a, t_stack *b);
 void	check_and_sort_more(t_stack *a, t_stack *b);
-
-/*checker.c*/
 
 #endif

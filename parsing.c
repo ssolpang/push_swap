@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 13:12:51 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/20 11:19:45 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/22 09:47:07 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ void	check_blank_argv(char *s, t_stack *a)
 	int	i;
 
 	i = 0;
-	while(ft_is_white(s[i]))
+	while (ft_is_white(s[i]))
 		i++;
 	if (!s[i])
-		{
-			terminate_stack(a);
-			ft_error_exit();
-		}
+	{
+		terminate_stack(a);
+		ft_error_exit();
+	}
 }
 
 int	check_not_number(char *str)

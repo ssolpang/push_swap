@@ -6,13 +6,13 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 17:25:20 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/13 14:16:13 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/22 10:06:16 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_error_exit()
+void	ft_error_exit(void)
 {
 	ft_putstr_fd("Error\n", 2);
 	exit(1);

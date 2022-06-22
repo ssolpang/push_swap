@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 14:17:50 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/21 14:14:52 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/22 09:56:59 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	search_smallest_index(t_stack *a)
 		}
 		i++;
 	}
-	return min_idx;
+	return (min_idx);
 }
 
 void	push_smaller_2_b(t_stack *a, t_stack *b)

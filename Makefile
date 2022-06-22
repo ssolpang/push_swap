@@ -6,7 +6,7 @@
 #    By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/16 09:46:06 by jkwak             #+#    #+#              #
-#    Updated: 2022/06/21 16:52:59 by jkwak            ###   ########.fr        #
+#    Updated: 2022/06/22 09:10:32 by jkwak            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,11 +78,11 @@ $(BONUS) : $(OBJS_B) $(LIBFT)
 		$(CC) $(CFLAGS) -o $@ $^
 
 clean :
-		$(RM) $(OBJS)
+		$(RM) $(OBJS) $(OBJS_B)
 		make clean -C $(LIBFT_DIR)
 
 fclean : clean
-		$(RM) $(NAME) $(LIBFT)
+		$(RM) $(NAME) $(BONUS) $(LIBFT)
 		make fclean -C $(LIBFT_DIR)
 
 re :

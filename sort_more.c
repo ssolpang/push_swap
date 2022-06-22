@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 09:52:43 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/21 14:12:04 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/22 14:22:09 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	better_rotate(t_stack *a)
 	}
 	if (rotate + (a->count / 10) >= reverse_rotate)
 		return (1);
-	return (2);
+	return (0);
 }
 
 int	optimal_chunk(int size)
@@ -52,24 +52,24 @@ int	optimal_chunk(int size)
 void	push_all_2_b(t_stack *a, t_stack *b)
 {
 	int	chunk;
-	int	which_rotate;
 
 	chunk = optimal_chunk(a->count);
-	which_rotate = better_rotate(a);
 	while (a->count)
 	{
 		if (a->arr[a->count - 1] <= b->count)
 			pb(a, b, "pb\n");
 		else if (a->arr[a->count - 1] >= (b->count + chunk))
-				if (which_rotate == 1)
-					ra(a, "ra\n");
-				else
-					rra(a, "rra\n");
+		{
+			if (better_rotate(a))
+				ra(a, "ra\n");
+			else
+				rra(a, "rra\n");
+		}
 		else
 		{
 			pb(a, b, "pb\n");
 			if ((a->arr[a->count - 1] >= (b->count + chunk))
-				&& (which_rotate == 1))
+				&& (better_rotate(a) == 1))
 				rr(a, b, "rr\n");
 			else
 				rb(b, "rb\n");

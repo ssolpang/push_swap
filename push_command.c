@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 10:52:21 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/21 14:03:18 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/22 09:49:14 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	pa(t_stack *a, t_stack *b, char *s)
 	if (!b->count)
 		return ;
 	ft_push(a, b);
-	ft_putstr_fd(/* "pa\n" */s, 1);
+	ft_putstr_fd(s, 1);
 }
 
 void	pb(t_stack *a, t_stack *b, char *s)
@@ -35,5 +35,5 @@ void	pb(t_stack *a, t_stack *b, char *s)
 	if (!a->count)
 		return ;
 	ft_push(b, a);
-	ft_putstr_fd(/* "pb\n" */s, 1);
+	ft_putstr_fd(s, 1);
 }
