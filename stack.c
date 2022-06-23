@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 19:42:31 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/22 10:05:45 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/23 11:08:16 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,14 @@ t_stack	*init_stack(void)
 int	push_stack(t_stack *stack, int value)
 {
 	int	*temp;
+	int	i;
 
+	i = 0;
+	while (i < stack->count)
+	{
+		if (value == stack->arr[i++])
+			ft_error_exit();
+	}
 	stack->arr[stack->count++] = value;
 	if (stack->count == stack->max)
 	{
