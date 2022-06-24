@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 09:52:43 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/22 14:22:09 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/24 09:45:02 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	optimal_chunk(int size)
 	return (chunk);
 }
 
-void	push_all_2_b(t_stack *a, t_stack *b)
+void	push_all_2_b(t_stack *a, t_stack *b, int which_rotate)
 {
 	int	chunk;
 
@@ -60,7 +60,7 @@ void	push_all_2_b(t_stack *a, t_stack *b)
 			pb(a, b, "pb\n");
 		else if (a->arr[a->count - 1] >= (b->count + chunk))
 		{
-			if (better_rotate(a))
+			if (which_rotate)
 				ra(a, "ra\n");
 			else
 				rra(a, "rra\n");
@@ -69,7 +69,7 @@ void	push_all_2_b(t_stack *a, t_stack *b)
 		{
 			pb(a, b, "pb\n");
 			if ((a->arr[a->count - 1] >= (b->count + chunk))
-				&& (better_rotate(a) == 1))
+				&& which_rotate)
 				rr(a, b, "rr\n");
 			else
 				rb(b, "rb\n");
@@ -102,6 +102,9 @@ void	push_all_2_a(t_stack *a, t_stack *b)
 
 void	check_and_sort_more(t_stack *a, t_stack *b)
 {
-	push_all_2_b(a, b);
+	int	which_rotate;
+
+	which_rotate = better_rotate(a);
+	push_all_2_b(a, b, which_rotate);
 	push_all_2_a(a, b);
 }

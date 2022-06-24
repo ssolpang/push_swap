@@ -6,12 +6,9 @@
 #    By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/16 09:46:06 by jkwak             #+#    #+#              #
-#    Updated: 2022/06/22 09:10:32 by jkwak            ###   ########.fr        #
+#    Updated: 2022/06/24 09:34:52 by jkwak            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-#주석으로 함수의 기능 대략 써놓기.. 큰그림을 그리자..
-#메모리 누수 확인하는 명령어로 추가해보자 make leaks
 
 NAME		= push_swap
 BONUS		= checker
@@ -63,9 +60,6 @@ RM			= rm -rf
 all : $(NAME)
 
 bonus : $(BONUS)
-
-debug :
-	gcc -g3 -fsanitize=address main.c -o main
 
 $(LIBFT) :
 		make -C $(LIBFT_DIR)
