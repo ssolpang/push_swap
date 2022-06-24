@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 12:44:57 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/22 09:44:06 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/24 11:23:19 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ int	main(int argc, char **argv)
 
 	a = init_stack();
 	make_stack_a(a, argc, argv);
+	if (!a->count)
+		return (0);
 	b = init_stack();
 	s = get_next_line(0);
 	while (s)

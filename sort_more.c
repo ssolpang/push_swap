@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 09:52:43 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/24 09:45:02 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/24 11:16:56 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	better_rotate(t_stack *a)
 		else
 			reverse_rotate++;
 	}
-	if (rotate + (a->count / 10) >= reverse_rotate)
+	if (rotate + (a->count * 0.4) >= reverse_rotate)
 		return (1);
 	return (0);
 }
