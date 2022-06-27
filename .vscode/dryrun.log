@@ -1,14 +1,12 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/jkwak/push_swap'
 cc -Wall -Werror -Wextra -c indexing.c -o indexing.o
- 
 cc -Wall -Werror -Wextra -c parsing_utils.c -o parsing_utils.o
 cc -Wall -Werror -Wextra -c parsing.c -o parsing.o
 cc -Wall -Werror -Wextra -c push_command.c -o push_command.o
 cc -Wall -Werror -Wextra -c push_swap.c -o push_swap.o
 cc -Wall -Werror -Wextra -c reverse_rotate_command.c -o reverse_rotate_command.o
 cc -Wall -Werror -Wextra -c rotate_command.c -o rotate_command.o
- 
 cc -Wall -Werror -Wextra -c sort_3.c -o sort_3.o
 cc -Wall -Werror -Wextra -c sort_5.c -o sort_5.o
 cc -Wall -Werror -Wextra -c sort_more.c -o sort_more.o

@@ -6,7 +6,7 @@
 /*   By: jkwak <jkwak@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 12:44:57 by jkwak             #+#    #+#             */
-/*   Updated: 2022/06/24 11:23:19 by jkwak            ###   ########.fr       */
+/*   Updated: 2022/06/27 16:11:02 by jkwak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,9 @@ int	main(int argc, char **argv)
 		s = get_next_line(0);
 	}
 	if (check_sorted(a) && !b->count)
-		ft_putstr_fd("OK\n", 2);
+		ft_putstr_fd("OK\n", 1);
 	else
-		ft_putstr_fd("KO\n", 2);
+		ft_putstr_fd("KO\n", 1);
 	terminate_stack(a);
 	terminate_stack(b);
 	return (0);
